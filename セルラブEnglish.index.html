@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セルラブEnglish - 女性のための英語コミュニティ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Crimson+Pro:wght@400;600&amp;family=Noto+Serif+JP:wght@400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <style>
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 80px;
+        position: relative;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP', sans-serif;
+        line-height: 1.6;
+        color: #2c2c2c;
+        background: linear-gradient(135deg, #fff8e7 0%, #ffffff 50%, #ffe4e8 100%);
+      }
+
+      .header {
+        text-align: center;
+        padding: 30px 0 40px 0;
+        border-bottom: 2px solid #e8b4b8;
+        margin-bottom: 40px;
+      }
+
+      .main-title {
+        font-size: 3.5em;
+        color: #e8b4b8;
+        margin: 0 0 10px 0;
+        line-height: 1;
+      }
+
+      .main-title span:first-child {
+        font-family: 'Allura', cursive;
+        font-size: 1em;
+      }
+
+      .main-title span:last-child {
+        font-family: 'Crimson Pro', serif;
+        color: #d4af37;
+      }
+
+      .subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1em;
+        color: #8b6f7d;
+        margin: 10px 0 15px 0;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+
+      .tagline {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 1em;
+        color: #666;
+        margin: 0;
+      }
+
+      .intro-message {
+        background: linear-gradient(135deg, #ffe4e8 0%, rgba(255, 228, 232, 0.3) 100%);
+        padding: 30px;
+        border-radius: 10px;
+        border-left: 5px solid #e8b4b8;
+        margin: 30px 0;
+        text-align: center;
+        font-size: 1.05em;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      .section {
+        margin: 30px 0;
+        padding: 25px 30px;
+        background: linear-gradient(135deg, #fff8e7 0%, rgba(255, 248, 231, 0.4) 100%);
+        border-radius: 8px;
+        border-left: 4px solid #e8b4b8;
+      }
+
+      .section-title {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.4em;
+        color: #d4af37;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e8b4b8;
+        padding-bottom: 10px;
+      }
+
+      .feelings-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feelings-list li {
+        background: rgba(255, 255, 255, 0.8);
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 3px solid #e8b4b8;
+        position: relative;
+      }
+
+      .feelings-list li:before {
+        content: '✓';
+        color: #e8b4b8;
+        font-weight: bold;
+        position: absolute;
+        left: -10px;
+        top: 15px;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .process-step {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        border: 2px solid #e8b4b8;
+        position: relative;
+      }
+
+      .step-number {
+        background: #d4af37;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+
+      .activities-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .activities-list li {
+        background: rgba(255, 255, 255, 0.8);
+        margin: 12px 0;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 3px solid #d4af37;
+      }
+
+      .activities-title {
+        font-weight: 600;
+        color: #8b6f7d;
+        margin-bottom: 5px;
+      }
+
+      .benefits-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .benefit-item {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 3px solid #e8b4b8;
+        font-size: 0.95em;
+      }
+
+      .target-info {
+        background: rgba(255, 248, 231, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 15px 0;
+        border: 1px solid #e8b4b8;
+      }
+
+      .overview-table {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border: 1px solid #e8b4b8;
+      }
+
+      .overview-table h4 {
+        color: #d4af37;
+        margin-bottom: 10px;
+        font-family: 'Noto Serif JP', serif;
+      }
+
+      .pricing-highlight {
+        background: linear-gradient(135deg, #ffe4e8 0%, rgba(255, 228, 232, 0.5) 100%);
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 15px 0;
+        border: 2px solid #d4af37;
+      }
+
+      .price-main {
+        font-size: 2em;
+        font-weight: bold;
+        color: #d4af37;
+        font-family: 'Crimson Pro', serif;
+      }
+
+      .price-note {
+        color: #8b6f7d;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+
+      .coach-profile {
+        background: linear-gradient(135deg, #fff8e7 0%, rgba(255, 248, 231, 0.6) 100%);
+        padding: 25px;
+        border-radius: 8px;
+        margin: 25px 0;
+        border: 1px solid #e8b4b8;
+      }
+
+      .coach-name {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #d4af37;
+        margin-bottom: 15px;
+        font-family: 'Noto Serif JP', serif;
+      }
+
+      .faq-item {
+        background: rgba(255, 255, 255, 0.8);
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 6px;
+        border-left: 3px solid #e8b4b8;
+      }
+
+      .faq-q {
+        font-weight: 600;
+        color: #8b6f7d;
+        margin-bottom: 8px;
+      }
+
+      .faq-a {
+        color: #555;
+        padding-left: 15px;
+      }
+
+      .closing-section {
+        background: linear-gradient(135deg, rgba(255, 248, 231, 0.8) 0%, rgba(255, 228, 232, 0.5) 100%);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 40px 0;
+        border: 2px solid #e8b4b8;
+      }
+
+      .closing-message {
+        font-size: 1.2em;
+        color: #d4af37;
+        font-family: 'Noto Serif JP', serif;
+        line-height: 1.7;
+      }
+
+      .heart-emoji {
+        color: #e8b4b8;
+        font-size: 1.5em;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 20px 15px;
+        }
+
+        .benefits-list {
+          grid-template-columns: 1fr;
+        }
+
+        .main-title {
+          font-size: 2.2em;
+        }
+
+        .main-title span:last-child {
+          font-size: 0.6em !important;
+        }
+
+        .section {
+          padding: 20px 15px;
+        }
+
+        .intro-message {
+          padding: 20px;
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="header">
+      <h1 class="main-title">
+        <span style="font-family: 'Allura', cursive;">Self Love</span>
+        <span style="font-family: 'Crimson Pro', serif; font-size: 0.5em; letter-spacing: 3px; display: block; margin-top: 8px;">ENGLISH</span>
+      </h1>
+      <div style="width: 100px; height: 2px; background: linear-gradient(90deg, transparent, #e8b4b8, transparent); margin: 15px auto;"></div>
+      <p class="subtitle">セルフラブ × ジャーナリング × 英語</p>
+      <p class="tagline">自分を大切にする女性のための、小さな英語コミュニティ</p>
+    </div>
+
+    <div class="intro-message">
+      <strong>12月、女性限定でソフトローンチ開催します。</strong><br>
+      英語の「正しさ」だけじゃなく、自分を大事にしながら、等身大の英語で想いを伝えられる私を一緒に育てていきませんか？
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">こんな気持ち、ありませんか？</h2>
+      <ul class="feelings-list">
+        <li>勉強はしてきたのに、自分の気持ちや本音を英語で言うのが難しい</li>
+        <li>文法や単語ばかり気になって、話すときに自信がなくなる</li>
+        <li>一人でアプリやテキストをやっていても、続かない・つまらない</li>
+        <li>英語だけじゃなくて、自分の心も整えたい・セルフラブも大事にしたい</li>
+        <li>安心できる女性だけの場で、ゆるく、でも着実に英語力を上げていきたい</li>
+      </ul>
+      <p style="text-align: center; font-weight: bold; color: #8b6f7d; margin-top: 20px">
+        ひとつでも当てはまる方に、セルラブEnglishはぴったりの場所です。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">セルラブEnglishとは？</h2>
+      <p style="text-align: center; font-size: 1.1em; color: #8b6f7d; margin-bottom: 20px">
+        <strong>セルフラブ × ジャーナリング × 英語</strong><br>
+        をテーマにした、女性限定オンラインコミュニティです。
+      </p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <strong>ジャーナリングで自分の気持ちと向き合う</strong>
+        </div>
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <strong>その気持ちを、シンプルな英語で表現する</strong>
+        </div>
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <strong>講師からフィードバックをもらいながら、「自分らしい英語」を育てる</strong>
+        </div>
+      </div>
+
+      <p style="text-align: center; font-size: 1.1em; color: #d4af37; font-weight: bold; margin-top: 25px">
+        「間違えたくない」から「英語で自分を語るのが楽しい」に変えていくことを目指します。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">どんなことをするの？</h2>
+
+      <ul class="activities-list">
+        <li>
+          <div class="activities-title">週2回のお題（月・木）- セルフラブや自己理解がテーマ</div>
+          <div>例：What made you smile today? / 最近の「ちいさな成功体験」について書いてみよう</div>
+          <div style="font-size: 0.9em; color: #666; margin-top: 5px">
+            日本語の補足も付けるので、「英語で何を書けばいいか分からない…」という方も安心です。
+          </div>
+        </li>
+
+        <li>
+          <div class="activities-title">週2回の個別フィードバック（火・金）</div>
+          <div>投稿してくださった文章ひとつひとつに、Kanakoからコメント・添削をお返しします。</div>
+          <div style="font-size: 0.9em; color: #666; margin-top: 5px">
+            もっと自然な言い回し、ビジネスシーンでも使える表現、その人らしさが伝わる言葉の選び方などを中心に、やさしく・具体的にフィードバック。
+          </div>
+        </li>
+
+        <li>
+          <div class="activities-title">復習＆インプットタイム（水・土・日）</div>
+          <div>
+            他のメンバーの投稿とフィードバックを読んで気づきをメモ、気に入ったフレーズを音読してみる、など自分のペースで学びを深める時間。
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-top: 5px">
+            さらに、いいなと思った表現や発音のコツなどをピックアップして、テキスト＋音声でシェアします。
+          </div>
+        </li>
+
+        <li>
+          <div class="activities-title">月1回のZoomミーティング</div>
+          <div>
+            発音＆イントネーションのミニレッスン、自分のジャーナリング内容をシェアする会、少人数での英語アウトプット練習など。
+          </div>
+          <div style="font-size: 0.9em; color: #666; margin-top: 5px">
+            テーマは月ごとに変えながら、「実際に声に出してみる」「聞き合う」時間を大切にしていきます。
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">このサロンで得られること</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">英語で自分の感情や考えを整理する習慣が身につく</div>
+        <div class="benefit-item">「正しい英語」だけでなく、自分らしく伝わる英語表現が増える</div>
+        <div class="benefit-item">セルフラブ・自己肯定感について考える時間が増え、心が少しずつ軽くなる</div>
+        <div class="benefit-item">一人では続けにくい学習が、仲間の存在で自然と続けやすくなる</div>
+        <div class="benefit-item">初級〜中級レベルでも、英語でアウトプットすることへの恐怖が和らぐ</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">対象の方・レベル感</h2>
+      <div class="target-info">
+        <ul style="margin: 0; padding-left: 20px">
+          <li>英語初級〜中級レベルの女性</li>
+          <li>中学〜高校レベルの文法は一通り学んだことがある</li>
+          <li>簡単な文なら読める・書けるが、「自分の気持ち」を英語にするのは不安</li>
+          <li>
+            年齢の目安は30〜50代の落ち着いた方を想定していますが、上記に限らず、コンセプトに共感してくださる女性ならどなたでも歓迎です
+          </li>
+        </ul>
+        <p style="text-align: center; font-weight: bold; color: #8b6f7d; margin-top: 15px">
+          文法が完璧である必要はありません。<br>
+          「ゆっくりでも、自分のペースで英語と向き合いたい」という気持ちがあれば大丈夫です。
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">開催概要（12月ソフトローンチ）</h2>
+      <div class="overview-table">
+        <h4>基本情報</h4>
+        <p><strong>形式：</strong>オンラインサロン（Discord＋Zoom）</p>
+        <p><strong>対象：</strong>女性限定</p>
+        <p><strong>内容：</strong>週2回お題投稿＋週2回フィードバック＋月1回Zoom</p>
+        <p><strong>期間：</strong>2025年12月スタート（詳細日程はお申し込みの方へご案内）</p>
+        <p><strong>定員：</strong>先着20名様</p>
+      </div>
+
+      <div class="pricing-highlight">
+        <h4 style="color: #d4af37; margin-bottom: 15px">参加費</h4>
+        <div class="price-main">¥980/月</div>
+        <div style="font-weight: bold; color: #e8b4b8; margin: 10px 0">12月ソフトローンチ特別価格</div>
+        <div class="price-note">
+          ソフトローンチ参加メンバーは、<br>
+          <strong>2026年1月以降も¥1,980（税込）で据え置き予定</strong>です。<br>
+          ※通常価格は、今後¥2,000台〜を予定しています。
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">講師プロフィール</h2>
+      <div class="coach-profile">
+        <div class="coach-name">Kanako（かなこ）</div>
+        <ul style="margin: 15px 0; padding-left: 20px">
+          <li>アメリカ在住歴 約20年</li>
+          <li>アメリカ企業での勤務歴・マネージャー経験あり</li>
+          <li>現在は地方銀行の支店長として働きながら、日本人向けの英会話コーチとしても活動中</li>
+        </ul>
+
+        <p style="margin: 20px 0; line-height: 1.7">
+          20代でアメリカに移住した当初、「英語ができない」「現地の15歳くらいの感覚しかない」と感じて自信をなくした時期がありました。
+        </p>
+
+        <p style="margin: 20px 0; line-height: 1.7">
+          そこから、コツコツと勉強と実践を重ねて、今では英語で仕事をし、チームを率いる立場に。
+        </p>
+
+        <div style="
+            background: rgba(255, 248, 231, 0.8);
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 20px;
+          ">
+          <p style="font-size: 1.1em; color: #d4af37; font-weight: bold; margin: 0">
+            「完璧じゃなくていい。<br>
+            でも、自分を大切にしながら、英語でも自分を表現できる女性を増やしたい。」
+          </p>
+          <p style="margin: 10px 0 0 0; color: #8b6f7d">という思いで、このサロンを立ち上げました。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">よくあるご質問</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 忙しくて毎回お題に答えられるか不安です。</div>
+        <div class="faq-a">
+          A.
+          すべて参加できなくても大丈夫です。1週間に1つでも、短い文でもOK。「完璧にやる」よりも、細く長く続けることを大事にしています。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. Discordを使ったことがありません。</div>
+        <div class="faq-a">
+          A.
+          サロン開始前に、初期設定と基本の使い方ガイドをお送りします。分からないことがあれば、個別にサポートしますのでご安心ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 英語はほとんど話せません。それでも参加できますか？</div>
+        <div class="faq-a">
+          A. はい、大丈夫です。シンプルな文から一緒に作っていきます。日本語で補足を入れていただいてもOKです。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 顔出しは必須ですか？</div>
+        <div class="faq-a">
+          A.
+          Zoomミーティングは、できれば顔出し推奨ですが、「今日はオフモードで参加したい」など、無理のない範囲で大丈夫です。
+        </div>
+      </div>
+    </div>
+
+    <div class="closing-section">
+      <div class="closing-message">
+        英語の勉強は、「やらなきゃ…」と思うとしんどくなりがちですが、<br>
+        自分を知る・大切にするためのツールとして英語を使うと、<br>
+        少しずつ、楽しく続けやすくなります。<br><br>
+
+        セルフラブとジャーナリングを通して、<br>
+        いまの自分に優しくしながら英語力も育てていきたい方。<br><br>
+
+        <span style="font-size: 1.3em">12月、セルラブEnglishでお待ちしています</span>
+        <span class="heart-emoji">🩷</span>
+      </div>
+    </div>
+  
+
+</body></html>
