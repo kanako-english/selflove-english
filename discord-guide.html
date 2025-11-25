@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord使い方ガイド - セルラブEnglish</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        background-color: #fff8f0;
+        color: #3d2817;
+        font-family: 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
+        line-height: 1.6;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding: 32px 40px;
+        }
+      }
+
+      .cover {
+        text-align: center;
+        background: linear-gradient(135deg, #f5e6e8 0%, #fff8f0 100%);
+        padding: 30px 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 2px solid #d9a5b3;
+      }
+
+      @media (min-width: 768px) {
+        .cover {
+          padding: 60px 40px;
+          margin-bottom: 40px;
+        }
+      }
+
+      .cover h1 {
+        color: #d9a5b3;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      @media (min-width: 768px) {
+        .cover h1 {
+          font-size: 2.5em;
+          margin-bottom: 20px;
+        }
+      }
+
+      .cover h2 {
+        color: #3d2817;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      @media (min-width: 768px) {
+        .cover h2 {
+          font-size: 1.5em;
+          margin-bottom: 30px;
+        }
+      }
+
+      .cover-message {
+        background-color: #fff8f0;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 1em;
+        border-left: 4px solid #d9a5b3;
+        text-align: left;
+      }
+
+      @media (min-width: 768px) {
+        .cover-message {
+          padding: 25px;
+          font-size: 1.1em;
+        }
+      }
+
+      .section {
+        background-color: #f5e6e8;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 1px solid #d9a5b3;
+        box-shadow: 0 2px 8px rgba(217, 165, 179, 0.1);
+      }
+
+      @media (min-width: 768px) {
+        .section {
+          padding: 30px;
+          margin: 30px 0;
+        }
+      }
+
+      .section h2 {
+        color: #d9a5b3;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #d9a5b3;
+        padding-bottom: 8px;
+      }
+
+      @media (min-width: 768px) {
+        .section h2 {
+          font-size: 1.8em;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .section h3 {
+        color: #3d2817;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: 768px) {
+        .section h3 {
+          font-size: 1.4em;
+          margin-top: 25px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .subsection {
+        background-color: #fff8f0;
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 6px;
+        border-left: 3px solid #d9a5b3;
+        box-shadow: 0 1px 4px rgba(217, 165, 179, 0.08);
+      }
+
+      @media (min-width: 768px) {
+        .subsection {
+          padding: 20px;
+          margin: 15px 0;
+        }
+      }
+
+      .highlight-box {
+        background-color: #fff8f0;
+        padding: 15px;
+        border: 2px dashed #d9a5b3;
+        border-radius: 8px;
+        margin: 15px 0;
+      }
+
+      @media (min-width: 768px) {
+        .highlight-box {
+          padding: 20px;
+          margin: 20px 0;
+        }
+      }
+
+      .point {
+        background-color: #f5e6e8;
+        padding: 12px;
+        border-radius: 6px;
+        margin: 12px 0;
+        font-weight: 500;
+      }
+
+      @media (min-width: 768px) {
+        .point {
+          padding: 15px;
+          margin: 15px 0;
+        }
+      }
+
+      ol,
+      ul {
+        margin-left: 15px;
+        padding-left: 10px;
+      }
+
+      @media (min-width: 768px) {
+        ol,
+        ul {
+          margin-left: 20px;
+          padding-left: 0;
+        }
+      }
+
+      li {
+        margin: 10px 0;
+        line-height: 1.8;
+      }
+
+      .qa-item {
+        margin: 15px 0;
+        padding: 15px;
+        background-color: #fff8f0;
+        border-radius: 8px;
+        border-left: 3px solid #d9a5b3;
+        box-shadow: 0 1px 4px rgba(217, 165, 179, 0.08);
+      }
+
+      @media (min-width: 768px) {
+        .qa-item {
+          margin: 20px 0;
+        }
+      }
+
+      .question {
+        font-weight: 600;
+        color: #d9a5b3;
+        margin-bottom: 8px;
+        font-size: 1.05em;
+      }
+
+      .answer {
+        color: #3d2817;
+        margin-left: 0;
+        padding-left: 0;
+        line-height: 1.8;
+      }
+
+      @media (min-width: 768px) {
+        .answer {
+          margin-left: 15px;
+        }
+      }
+
+      .final-message {
+        text-align: center;
+        background: linear-gradient(135deg, #f5e6e8 0%, #fff8f0 100%);
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-top: 30px;
+        border: 2px solid #d9a5b3;
+        box-shadow: 0 2px 8px rgba(217, 165, 179, 0.15);
+      }
+
+      @media (min-width: 768px) {
+        .final-message {
+          padding: 40px;
+          margin-top: 40px;
+        }
+      }
+
+      .final-message h3 {
+        color: #d9a5b3;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+      }
+
+      @media (min-width: 768px) {
+        .final-message h3 {
+          font-size: 1.6em;
+          margin-bottom: 20px;
+        }
+      }
+
+      .final-message p {
+        line-height: 1.8;
+      }
+
+      .signature {
+        text-align: right;
+        margin-top: 25px;
+        font-style: italic;
+        color: #d9a5b3;
+        font-size: 1.1em;
+      }
+
+      @media (min-width: 768px) {
+        .signature {
+          margin-top: 30px;
+        }
+      }
+
+      strong {
+        color: #d9a5b3;
+      }
+
+      p {
+        line-height: 1.8;
+      }
+
+      /* スマホでタップしやすいように */
+      @media (max-width: 767px) {
+        a {
+          min-height: 44px;
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <h1>Discord使い方ガイド 🩷</h1>
+      <h2>セルラブEnglishへようこそ</h2>
+      <div class="cover-message">
+        このガイドは、Discordが初めての方でも安心して参加できるように作りました。<br />
+        自分のペースで、ゆっくり慣れていってくださいね。 🌸
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>1. Discordへようこそ 💬</h2>
+      <p>
+        <strong>Discordとは</strong
+        >、チャットとボイス通話ができるコミュニティアプリです。世界中の人々が趣味や学習のためのコミュニティを作っています。
+      </p>
+
+      <div class="subsection">
+        <h3>セルラブEnglishでの使い方 ✨</h3>
+        <ul>
+          <li><strong>ジャーナリングのお題</strong>：月曜・木曜にお題が届きます</li>
+          <li><strong>フィードバック</strong>：Kanakoからの温かいコメント</li>
+          <li><strong>メンバー同士の交流</strong>：支え合いながら成長</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>安心ポイント 🌸</strong><br />
+        ・見るだけの参加もOK<br />
+        ・自分のペースで参加できる<br />
+        ・本名や顔出しは必要なし<br />
+        ・完璧じゃなくても大丈夫
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2. はじめての設定 ✨</h2>
+
+      <div class="subsection">
+        <h3>スマホの場合 📱</h3>
+        <ol>
+          <li><strong>App Store</strong>または<strong>Google Play</strong>でDiscordアプリをダウンロード</li>
+          <li>アプリを開いて「<strong>登録</strong>」をタップ</li>
+          <li><strong>メールアドレス、ユーザー名、パスワード</strong>を入力</li>
+          <li><strong>誕生日</strong>を入力して「次へ」</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>PCの場合 💻</h3>
+        <ol>
+          <li><strong>discord.com</strong> にアクセス</li>
+          <li>「<strong>ログイン</strong>」または「<strong>Discord をダウンロード</strong>」</li>
+          <li>アカウント作成またはブラウザ版で使用可能</li>
+        </ol>
+      </div>
+
+      <div class="point">
+        <strong>ポイント 🌸</strong><br />
+        ユーザー名は後で変更できます。ニックネームも使えるので、本名でなくてOKです。
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. サーバーへの参加方法 🚪</h2>
+      <ol>
+        <li><strong>Kanakoから送られた招待リンク</strong>をタップまたはクリック</li>
+        <li>「<strong>招待を受ける</strong>」をタップ</li>
+        <li><strong>セルラブEnglishサーバーに参加完了！</strong> 🎉</li>
+        <li>簡単なアンケートや自己紹介があれば、無理のない範囲で入力</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>4. チャンネルの見方 📚</h2>
+
+      <div class="subsection">
+        <h3>左側のサイドバー</h3>
+        <ul>
+          <li><strong>カテゴリ</strong>：大きな分類（絵文字とタイトルで表示されています）</li>
+          <li><strong>チャンネル</strong>：カテゴリの中の小部屋（#マークが付いています）</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>📍 はじめに（START HERE）</h3>
+        <ul>
+          <li><strong>💗 welcome（ウェルカム）</strong>：最初に読むチャンネル。コミュニティのルールや雰囲気を確認できます</li>
+          <li><strong>📋 ルール・ガイドライン</strong>：大切にしたいマナーやガイドライン</li>
+          <li><strong>👋 はじめましての部屋（自己紹介）</strong>：無理のない範囲で自己紹介をどうぞ</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>📓 ジャーナリング（JOURNALING）</h3>
+        <p>ここがセルラブEnglishのメインスペースです！</p>
+        <ul>
+          <li><strong># 12月第1週</strong>：12月第1週のジャーナリングお題と投稿</li>
+          <li><strong># 12月第2週</strong>：12月第2週のジャーナリングお題と投稿</li>
+          <li><strong># 12月第3週</strong>：12月第3週のジャーナリングお題と投稿</li>
+          <li><strong># 12月第4週</strong>：12月第4週のジャーナリングお題と投稿</li>
+        </ul>
+        <div class="point">
+          <strong>ポイント 🌸</strong><br />
+          週ごとにチャンネルが分かれているので、自分のペースで参加できます。過去の週を見返すこともできます。
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>💡 コミュニティ（COMMUNITY）</h3>
+        <ul>
+          <li><strong>🙋 質問・相談</strong>：わからないことや相談したいことがあればこちらへ</li>
+          <li><strong>☕ ゆるっと雑談</strong>：英語学習のこと、日常のこと、自由におしゃべり</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>📢 運営（ADMIN）</h3>
+        <ul>
+          <li><strong>📣 お知らせ（重要）</strong>：Kanakoからの重要なお知らせ。通知ONがおすすめ</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <strong>迷ったら 🌸</strong><br />
+        ・ジャーナルを投稿したい → 📓ジャーナリングカテゴリの該当週チャンネル<br />
+        ・わからないことがある → 💡コミュニティの「質問・相談」<br />
+        ・おしゃべりしたい → 💡コミュニティの「ゆるっと雑談」<br />
+        ・お知らせを確認したい → 📢運営の「お知らせ（重要）」
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>5. メッセージの送り方 💌</h2>
+
+      <div class="subsection">
+        <h3>基本の投稿</h3>
+        <ol>
+          <li>画面下の「<strong>メッセージを入力</strong>」欄をタップ</li>
+          <li>テキストを入力</li>
+          <li><strong>送信ボタン（→マーク）</strong>をタップ</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>返信のやり方</h3>
+        <ul>
+          <li>メッセージを<strong>長押し</strong>（スマホ）または<strong>右クリック</strong>（PC）</li>
+          <li>「<strong>返信</strong>」を選択</li>
+          <li>返信内容を入力して送信</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>リアクション 💕</h3>
+        <ul>
+          <li>メッセージを長押しして「<strong>リアクション</strong>」</li>
+          <li>絵文字を選ぶだけでOK</li>
+          <li>「いいね！」の代わりに🩷や✨を使ってみて</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>6. ジャーナル投稿のやり方 ✍️</h2>
+
+      <div class="subsection">
+        <h3>お題への返信方法</h3>
+        <ol>
+          <li><strong>#月曜お題</strong> または <strong>#木曜お題</strong> チャンネルを開く</li>
+          <li>Kanakoが投稿した<strong>お題を確認</strong></li>
+          <li>お題のメッセージ下の「<strong>返信</strong>」または「<strong>スレッド</strong>」をタップ</li>
+          <li><strong>英語ジャーナルを入力して送信</strong></li>
+        </ol>
+      </div>
+
+      <div class="point">
+        <strong>ポイント 🌸</strong><br />
+        ・1〜2文からでOK<br />
+        ・書けない週があっても大丈夫<br />
+        ・他の人の投稿を読むだけの参加もOK
+      </div>
+
+      <div class="subsection">
+        <h3>編集・削除</h3>
+        <ul>
+          <li>自分のメッセージを長押し→「<strong>編集</strong>」または「<strong>削除</strong>」</li>
+          <li>誤字を見つけても、後から直せます</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>7. 通知設定 🔔</h2>
+
+      <div class="subsection">
+        <h3>サーバー全体をミュート</h3>
+        <ol>
+          <li>サーバー名を<strong>長押し</strong>（スマホ）または<strong>右クリック</strong>（PC）</li>
+          <li>「<strong>通知設定</strong>」を選択</li>
+          <li>「すべてのメッセージ」→「<strong>なし</strong>」に変更</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>特定のチャンネルだけ通知</h3>
+        <ol>
+          <li>チャンネル名を長押しまたは右クリック</li>
+          <li>「<strong>通知設定</strong>」</li>
+          <li>「<strong>すべてのメッセージ</strong>」または「<strong>@メンション</strong>」を選択</li>
+        </ol>
+      </div>
+
+      <div class="point">
+        <strong>おすすめ設定 💕</strong><br />
+        ・#お知らせ → 通知オン<br />
+        ・その他 → 自分のペースで確認
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>8. プロフィール設定 👤</h2>
+
+      <div class="subsection">
+        <h3>ニックネームの変更（サーバー内のみ）</h3>
+        <ol>
+          <li>自分のアイコンをタップ</li>
+          <li>「<strong>プロフィールを編集</strong>」</li>
+          <li>「<strong>サーバーニックネーム</strong>」を入力</li>
+          <li>本名でなくてOK、好きな名前で 🌸</li>
+        </ol>
+      </div>
+
+      <div class="subsection">
+        <h3>アイコンの設定</h3>
+        <ol>
+          <li>設定（歯車マーク）→「<strong>プロフィール</strong>」</li>
+          <li><strong>アバター</strong>をタップして画像をアップロード</li>
+          <li>顔写真でなくても大丈夫、イラストやお花の写真でもOK</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>9. 困ったときは 🆘</h2>
+
+      <div class="subsection">
+        <h3>よくある質問</h3>
+
+        <div class="qa-item">
+          <div class="question"><strong>Q. 通知が多すぎて困っています</strong></div>
+          <div class="answer">A. 通知設定でミュートできます。自分の見たいタイミングで確認してくださいね。</div>
+        </div>
+
+        <div class="qa-item">
+          <div class="question"><strong>Q. 投稿を間違えて送ってしまいました</strong></div>
+          <div class="answer">A. 自分のメッセージは削除や編集ができます。落ち着いて直せば大丈夫です 💕</div>
+        </div>
+
+        <div class="qa-item">
+          <div class="question"><strong>Q. 毎回投稿しないといけませんか？</strong></div>
+          <div class="answer">A. いいえ。見るだけ参加、書けるときだけ書く、それで十分です。</div>
+        </div>
+
+        <div class="qa-item">
+          <div class="question"><strong>Q. スマホとPCで同じアカウントが使えますか？</strong></div>
+          <div class="answer">A. はい。同じメールアドレスでログインすれば両方で使えます。</div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>サポート 💕</h3>
+        <p>
+          わからないことがあったら、遠慮なく聞いてくださいね。以下の方法でサポートいたします：
+        </p>
+        
+        <div class="highlight-box" style="margin-top: 15px;">
+          <strong>📱 LINEまたはメールで直接質問もOK</strong><br /><br />
+          Discordの使い方がわからないときは、Discord内で質問するのはハードルが高いですよね。<br />
+          そんなときは、<strong>LINEやメール</strong>で直接Kanakoに質問を送ってください。<br />
+          一緒に解決していきましょう 🌸
+        </div>
+        
+        <p style="margin-top: 15px;">
+          Discordに慣れてきたら、<strong>#質問・相談チャンネル</strong>もご活用ください。<br />
+          他のメンバーも同じような疑問を持っているかもしれないので、みんなで助け合えます 💕
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>10. 大切にしたいこと 🩷</h2>
+
+      <div class="subsection">
+        <h3>セルラブEnglishのマナー</h3>
+        <ul>
+          <li><strong>自分のペースで</strong>：完璧を目指さなくて大丈夫</li>
+          <li><strong>やさしさを大切に</strong>：自分にも、他の人にも</li>
+          <li><strong>プライバシーを守る</strong>：コミュニティ内の投稿は外部に持ち出さない</li>
+          <li><strong>比べない</strong>：人それぞれの学び方とペースがあります</li>
+          <li><strong>聞くだけもOK</strong>：参加の形は自由です</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <h3>セルフラブの精神 💕</h3>
+        <p>
+          「今の私でいい」と思える場所。<br />
+          英語が完璧じゃなくても、<br />
+          毎回投稿できなくても、<br />
+          あなたがここにいてくれることが、嬉しいです。
+        </p>
+
+        <p>
+          ゆっくり、自分のペースで、<br />
+          一緒に成長していきましょう 🌸✨
+        </p>
+      </div>
+    </div>
+
+    <div class="final-message">
+      <h3>最後に 🩷</h3>
+      <p>
+        Discordは最初、少し複雑に感じるかもしれません。でも、一度慣れてしまえば、とても便利で居心地の良い場所になるはずです。
+      </p>
+
+      <p>
+        わからないことがあったら、いつでも質問してくださいね。<br />
+        一緒に、ゆっくり進んでいきましょう。
+      </p>
+
+      <p><strong>セルラブEnglishでお待ちしています 🩷</strong></p>
+
+      <div class="signature">--- Kanako</div>
+    </div>
+
+  </body>
+</html>
